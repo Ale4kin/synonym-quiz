@@ -134,7 +134,7 @@ function startLearning(index) {
   
     function showNextSynonym() {
       const correctSynonym = synonyms[currentIndex].de; 
-  
+     
    
       if (currentOptions.length === 0) {
         currentOptions = generateOptions(correctSynonym, translation);
@@ -188,14 +188,16 @@ function resetQuiz() {
 }
 
 function generateOptions(correctSynonym, currentWord) {
-  const allSynonyms = words
-    .flatMap((item) => item.synonyms.map((s) => s.de)) 
-    .filter((option) => option !== correctSynonym && option !== currentWord); 
-
-  const randomOptions = allSynonyms.sort(() => Math.random() - 0.5).slice(0, 4); 
-  randomOptions.push(correctSynonym); 
-  return randomOptions.sort(() => Math.random() - 0.5); 
-}
+    
+    const allSynonyms = words
+      .flatMap((item) => item.synonyms.map((s) => s.de))
+      .filter((option) => option !== correctSynonym); // Убираем текущий правильный синоним
+  
+    const randomOptions = allSynonyms.sort(() => Math.random() - 0.5).slice(0, 4);
+  
+    randomOptions.push(correctSynonym);
+    return randomOptions.sort(() => Math.random() - 0.5);
+  }
 
 function shuffleOptions(synonyms, key, correctValue) {
   const options = synonyms.map((s) => s[key]);

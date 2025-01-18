@@ -197,17 +197,6 @@ const words = [
         { ru: "требовать", de: "fordern" }
       ]
     },
-    {
-        word: "отчаяние",
-        translation: "Verzweiflung",
-        synonyms: [
-          { ru: "Я больше не видел выхода", de: "Ich sah keinen Ausweg mehr" },
-          { ru: "Я был близок к слезам", de: "Ich war den Tränen nahe" },
-          { ru: "Я почувствовал комок в горле", de: "Ich fühlte einen Kloß im Hals" },
-          { ru: "Мои колени стали слабыми", de: "Meine Knie wurden weich" },
-          { ru: "Мое зрение потемнело", de: "Mir wurde schwarz vor Augen" }
-        ]
-      },
       {
         word: "отчаяние",
         translation: "Verzweiflung",
